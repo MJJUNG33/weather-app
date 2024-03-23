@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("https://t4.ftcdn.net/jpg/04/97/80/99/360_F_497809944_FMo3DO6j7XSlb9rZKOlnqaaWoJhuZXBm.jpg");
+  background-size: contain;
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.displayBox {
+  border: solid 3px white;
+  border-radius: 5px;
+  width: 500px;
+  background-color: #fff8e3;
+  opacity: 0.9;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.locationButtons {
+  display: flex;
+  border: none;
+  height: 80px;
+  width: 700px;
+  border-radius: 5px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.currentLocationButton {
+  border: none;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  margin: 2rem;
+  max-width: fit-content;
+  padding: 0.5rem;
+  font-weight: bold;
+  background-color: #006aa3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 4rem;
+}
+
+.anotherLocationButton {
+  font-weight: bold;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  max-width: fit-content;
+  background-color: lightblue;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.currentLocation {
+  font-size: 1.5rem;
+}
+
+.currentTemp {
+  font-size: 2rem;
+}
+
+.displayBox p {
+  margin: 0.5rem;
+}
