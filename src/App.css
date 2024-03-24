@@ -5,8 +5,8 @@
 }
 
 body {
-  background-image: url("https://t4.ftcdn.net/jpg/04/97/80/99/360_F_497809944_FMo3DO6j7XSlb9rZKOlnqaaWoJhuZXBm.jpg");
-  background-size: contain;
+  background-image: url("https://wallpapersmug.com/u/f5d72b/digital-art-horizon-mountains-forest-pinkish.jpg");
+  background-size: cover;
   height: 100vh;
 }
 
@@ -19,11 +19,15 @@ body {
 }
 
 .displayBox {
-  border: solid 3px white;
+  border: none;
   border-radius: 5px;
   width: 500px;
-  background-color: #fff8e3;
-  opacity: 0.9;
+  background: linear-gradient(
+    110deg,
+    rgba(247, 160, 227, 0.9) 30%,
+    rgba(158, 150, 233, 0.9) 60%
+  );
+  color: white;
   text-align: center;
   padding: 2rem;
   display: flex;
@@ -33,7 +37,7 @@ body {
 
 .locationButtons {
   display: flex;
-  border: none;
+  border: 2px solid #9e96e9;
   height: 80px;
   width: 700px;
   border-radius: 5px;
@@ -52,7 +56,7 @@ body {
   max-width: fit-content;
   padding: 0.5rem;
   font-weight: bold;
-  background-color: #006aa3;
+  background-color: #9e96e9;
   color: white;
   border: none;
   border-radius: 5px;
@@ -67,7 +71,7 @@ body {
   margin-right: 2rem;
   padding: 0.5rem;
   max-width: fit-content;
-  background-color: lightblue;
+  background-color: rgb(247, 160, 227);
   border: none;
   color: white;
   border-radius: 5px;
@@ -83,4 +87,12 @@ body {
 
 .displayBox p {
   margin: 0.5rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(100, 100, 100);
 }
