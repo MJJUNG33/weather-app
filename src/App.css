@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Lilita One", sans-serif;
 }
 
 body {
@@ -25,7 +26,7 @@ body {
   background: linear-gradient(
     110deg,
     rgba(247, 160, 227, 0.9) 30%,
-    rgba(158, 150, 233, 0.9) 60%
+    rgba(158, 150, 233, 0.8) 60%
   );
   color: white;
   text-align: center;
@@ -33,6 +34,8 @@ body {
   display: flex;
   flex-direction: column;
   font-weight: bold;
+  justify-content: center;
+  align-items: center;
 }
 
 .locationButtons {
@@ -54,7 +57,7 @@ body {
   justify-content: center;
   margin: 2rem;
   max-width: fit-content;
-  padding: 0.5rem;
+  padding: 0.75rem;
   font-weight: bold;
   background-color: #9e96e9;
   color: white;
@@ -69,7 +72,7 @@ body {
   flex: 1;
   justify-content: center;
   margin-right: 2rem;
-  padding: 0.5rem;
+  padding: 0.75rem;
   max-width: fit-content;
   background-color: rgb(247, 160, 227);
   border: none;
@@ -77,12 +80,17 @@ body {
   border-radius: 5px;
 }
 
-.currentLocation {
-  font-size: 1.5rem;
+.locationName {
+  font-size: 2rem;
 }
 
 .currentTemp {
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+.weatherDescription,
+.maxMinTemp {
+  font-size: 1.5rem;
 }
 
 .displayBox p {
@@ -95,4 +103,10 @@ button:hover {
 
 .active {
   background-color: rgb(100, 100, 100);
+}
+
+.weatherIcon {
+  width: max-content;
+  height: auto;
+  justify-self: center;
 }

@@ -7,13 +7,23 @@ const DisplayBox = ({ currentWeather }) => {
 
   return (
     <div className="displayBox">
-      <p className="currentLocation">{currentWeather?.name}</p>
+      <p className="locationName">{currentWeather?.name}</p>
       <p className="currentTemp">
         {`${currentWeather?.main.temp} °C / ${fahrenheitTemp}
          °F`}
       </p>
-      <p>{currentWeather?.weather[0].description}</p>
-      <p>{`L:${currentWeather?.main.temp_min}° H:${currentWeather?.main.temp_max}°`}</p>
+      <p className="weatherDescription">
+        {currentWeather?.weather[0].description}
+      </p>
+      {currentWeather && (
+        <img
+          src={`https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`}
+          alt={currentWeather.weather[0].description}
+          className="weatherIcon"
+        />
+      )}
+
+      <p className="maxMinTemp">{`L:${currentWeather?.main.temp_min}° H:${currentWeather?.main.temp_max}°`}</p>
     </div>
   );
 };
