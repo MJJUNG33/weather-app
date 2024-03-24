@@ -29,27 +29,37 @@ function App() {
   };
 
   const fetchWeatherByCurrentLocation = async (latitude, longitude) => {
-    setLoading(true);
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=7c41da7881d71baf9bc475e871b9534c&units=metric`
-    );
+    try {
+      setLoading(true);
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=7c41da7881d71baf9bc475e871b9534c&units=metric`
+      );
 
-    const data = await response.json();
-    console.log(data);
-    setCurrentWeather(data);
-    setLoading(false);
+      const data = await response.json();
+      console.log(data);
+      setCurrentWeather(data);
+      setLoading(false);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
   };
 
   const fetchWeatherByCity = async () => {
-    setLoading(true);
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7c41da7881d71baf9bc475e871b9534c&units=metric`
-    );
+    try {
+      setLoading(true);
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7c41da7881d71baf9bc475e871b9534c&units=metric`
+      );
 
-    const data = await response.json();
-    setCurrentWeather(data);
-    console.log(data);
-    setLoading(false);
+      const data = await response.json();
+      setCurrentWeather(data);
+      console.log(data);
+      setLoading(false);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
   };
 
   useEffect(() => {

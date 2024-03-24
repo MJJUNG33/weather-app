@@ -23,7 +23,7 @@ const DisplayBox = ({ currentWeather }) => {
         />
       )}
 
-      <p className="maxMinTemp">{`L:${currentWeather?.main.temp_min}° H:${currentWeather?.main.temp_max}°`}</p>
+      <p className="maxMinTemp">{`L: ${currentWeather?.main.temp_min}°   H: ${currentWeather?.main.temp_max}°`}</p>
     </div>
   );
 };
